@@ -127,8 +127,10 @@ function checkLinks() {
 		    if(typeof(Storage) !== "undefined") {
 		        if (localStorage.linkid {
 		            localStorage.linkid[index] = this.href.substring(17);
+		            console.log("entré aquí");
 		        } else {
 		            localStorage.linkid[index] = this.href.substring(17);
+		            console.log("al menos entré aquí");
 		        }
 		        console.log( "Acabo de guardar " + localStorage.linkid[index] + " en la posición" + index + " de linkid.");
 		    } else {
