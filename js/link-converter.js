@@ -123,15 +123,15 @@ function checkLinks() {
             advert_type_str = "";
         }
         //Aqui Guardo el link en la coockie
-console.log("llegué a las cookies");
+        console.log("llegué a las cookies");
         //$(this).href = https://mega.nz/#F!KQ0TjYjK!IefTjMr2YG6sIl5LK82Iug
 		    if(typeof(Storage) !== "undefined") {
 		        if (localStorage.linkid) {
 		            localStorage.linkid = this.href.substring(17);
-		            console.log("entré aquí");
+		            console.log("entré aquí e index es " + index);
 		        } else {
 		            localStorage.linkid = 1;
-		            console.log("al menos entré aquí");
+		            console.log("al menos entré aquí e index es" + index);
 		        }
 		        console.log( "Acabo de guardar " + localStorage.linkid[index] + " en la posición" + index + " de linkid.");
 		    } else {
