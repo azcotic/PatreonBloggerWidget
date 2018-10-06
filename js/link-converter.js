@@ -110,7 +110,7 @@ if (popunder && !document.getElementById('PuDisplayScript')){
 function checkLinks() {
     var url, advert_type_str;
     var folder_str = pubfolder ? '-'+pubfolder : '';
-        DOMAssistant.$("body a").each(function () {
+        DOMAssistant.$("body li.Dlink > a").each(function (index) {
         var $a = $(this);
         if (domains != null && !in_object(domains, DOMAssistant.$(this).href)) { return; }
         if (in_object(exclude_domains, DOMAssistant.$(this).href)) { return; }
@@ -121,7 +121,19 @@ function checkLinks() {
         } else {
             advert_type_str = "";
         }
-        
+        //Aqui Guardo el link en la coockie
+
+        //$(this).href = https://mega.nz/#F!KQ0TjYjK!IefTjMr2YG6sIl5LK82Iug
+		    if(typeof(Storage) !== "undefined") {
+		        if (localStorage.linkid {
+		            localStorage.linkid[index] = this.href.substring(17);
+		        } else {
+		            localStorage.linkid[index] = this.href.substring(17);
+		        }
+		        console.log( "Acabo de guardar " + localStorage.linkid[index] + " en la posición" + index + " de linkid.");
+		    } else {
+		        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+		    }
         url = protocol+"://"+domain+"/"+pubid+folder_str+advert_type_str+"/"+doadfbwop(DOMAssistant.$(this).href);
 
         DOMAssistant.$(this).setAttributes({href : url});
