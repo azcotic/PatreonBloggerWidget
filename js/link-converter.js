@@ -63,7 +63,7 @@ if (typeof window.exclude_domains != "undefined") {
     exclude_domains = exclude_domains.concat(window.exclude_domains);
 }
 
-var domains = defaults.domains;
+var domains = defaults.domains; 
 if (typeof window.domains != "undefined") { domains = window.domains; }
 
 var pubfolder = defaults.pubfolder;
