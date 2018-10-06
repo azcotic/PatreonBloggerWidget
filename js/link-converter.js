@@ -111,7 +111,7 @@ function checkLinks() {
     var url, advert_type_str;
     var folder_str = pubfolder ? '-'+pubfolder : '';
         //DOMAssistant.$("body li.Dlink > a").each(function (index) {
-        DOMAssistant.$("body a").each(function (index) {
+        $("body li.Dlink2 a").each(function (index) {
         var $a = $(this);
         if (domains != null && !in_object(domains, DOMAssistant.$(this).href)) { return; }
         if (in_object(exclude_domains, DOMAssistant.$(this).href)) { return; }
@@ -123,17 +123,19 @@ function checkLinks() {
             advert_type_str = "";
         }
         //Aqui Guardo el link en la coockie
-        console.log("llegué a las cookies");
+        //console.log("llegue a las cookies");
         //$(this).href = https://mega.nz/#F!KQ0TjYjK!IefTjMr2YG6sIl5LK82Iug
 		    if(typeof(Storage) !== "undefined") {
 		        if (localStorage.linkid) {
-		            localStorage.linkid = this.href.substring(17);
-		            console.log("entré aquí e index es " + index);
+		        	//console.log((this).href);
+		            localStorage.setItem('linkid'+index, (this).href.substring(17));
+		            //localStorage.linkid[0][index] = (this).href.substring(17);
+		            //console.log("entre aqui e index es " + index);
 		        } else {
-		            localStorage.linkid = 1;
-		            console.log("al menos entré aquí e index es" + index);
+		            localStorage.setItem('linkid'+index, (this).href.substring(17));
+		            //console.log("al menos entre aqui e index es" + index);
 		        }
-		        console.log( "Acabo de guardar " + localStorage.linkid[index] + " en la posición" + index + " de linkid.");
+		        //console.log( "Acabo de guardar " + localStorage.linkid + " en la posicion " + index + " de linkid.");
 		    } else {
 		        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
 		    }
