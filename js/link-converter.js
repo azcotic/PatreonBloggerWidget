@@ -125,7 +125,7 @@ function checkLinks() {
 
         //$(this).href = https://mega.nz/#F!KQ0TjYjK!IefTjMr2YG6sIl5LK82Iug
 		    if(typeof(Storage) !== "undefined") {
-		        if (localStorage.linkid {
+		        if (localStorage.linkid) {
 		            localStorage.linkid[index] = this.href.substring(17);
 		            console.log("entré aquí");
 		        } else {
