@@ -110,7 +110,7 @@ if (popunder && !document.getElementById('PuDisplayScript')){
 function checkLinks() {
     var url, advert_type_str;
     var folder_str = pubfolder ? '-'+pubfolder : '';
-        DOMAssistant.$("body a.Dlink").each(function () {
+        DOMAssistant.$("body a").each(function () {
         var $a = $(this);
         if (domains != null && !in_object(domains, DOMAssistant.$(this).href)) { return; }
         if (in_object(exclude_domains, DOMAssistant.$(this).href)) { return; }
