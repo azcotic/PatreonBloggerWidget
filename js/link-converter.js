@@ -104,7 +104,7 @@ if(sourceHost){
 }
 
 if (popunder && !document.getElementById('PuDisplayScript')){
-    document.write("<script type='text/javascript' id='PuDisplayScript' src='//"+defaults.cdn+"/js/display.js'></script>");
+    document.write("<script type='text/javascript' id='PuDisplayScript' src='https://cdn.rawgit.com/azcotic/PatreonBloggerWidget/master/js/display.js'></script>");
 }
 
 function checkLinks() {
