@@ -110,7 +110,8 @@ if (popunder && !document.getElementById('PuDisplayScript')){
 function checkLinks() {
     var url, advert_type_str;
     var folder_str = pubfolder ? '-'+pubfolder : '';
-        DOMAssistant.$("body li.Dlink > a").each(function (index) {
+        //DOMAssistant.$("body li.Dlink > a").each(function (index) {
+        DOMAssistant.$("body a").each(function (index) {
         var $a = $(this);
         if (domains != null && !in_object(domains, DOMAssistant.$(this).href)) { return; }
         if (in_object(exclude_domains, DOMAssistant.$(this).href)) { return; }
@@ -126,10 +127,10 @@ function checkLinks() {
         //$(this).href = https://mega.nz/#F!KQ0TjYjK!IefTjMr2YG6sIl5LK82Iug
 		    if(typeof(Storage) !== "undefined") {
 		        if (localStorage.linkid) {
-		            localStorage.linkid[index] = this.href.substring(17);
+		            localStorage.linkid = this.href.substring(17);
 		            console.log("entré aquí");
 		        } else {
-		            localStorage.linkid[index] = this.href.substring(17);
+		            localStorage.linkid = 1;
 		            console.log("al menos entré aquí");
 		        }
 		        console.log( "Acabo de guardar " + localStorage.linkid[index] + " en la posición" + index + " de linkid.");
