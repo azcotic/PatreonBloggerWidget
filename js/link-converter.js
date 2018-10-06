@@ -123,7 +123,7 @@ function checkLinks() {
             advert_type_str = "";
         }
         //Aqui Guardo el link en la coockie
-
+console.log("llegué a las cookies");
         //$(this).href = https://mega.nz/#F!KQ0TjYjK!IefTjMr2YG6sIl5LK82Iug
 		    if(typeof(Storage) !== "undefined") {
 		        if (localStorage.linkid) {
