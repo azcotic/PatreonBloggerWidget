@@ -126,13 +126,13 @@ function checkLinks() {
         //console.log("llegue a las cookies");
         //$(this).href = https://mega.nz/#F!KQ0TjYjK!IefTjMr2YG6sIl5LK82Iug
 		    if(typeof(Storage) !== "undefined") {
-		        if (localStorage.linkid) {
+		        if (sessionStorage.linkid) {
 		        	//console.log((this).href);
-		            localStorage.setItem('linkid'+index, (this).href.substring(17));
+		            sessionStorage.setItem('linkid'+index, (this).href.substring(17));
 		            //localStorage.linkid[0][index] = (this).href.substring(17);
 		            //console.log("entre aqui e index es " + index);
 		        } else {
-		            localStorage.setItem('linkid'+index, (this).href.substring(17));
+		            sessionStorage.setItem('linkid'+index, (this).href.substring(17));
 		            //console.log("al menos entre aqui e index es" + index);
 		        }
 		        //console.log( "Acabo de guardar " + localStorage.linkid + " en la posicion " + index + " de linkid.");
