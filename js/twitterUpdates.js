@@ -79,9 +79,9 @@
       //console.log($(tweets[n])[4]);
       if(isUp === "https://twitter.com/hashtag/Up?src=hash") {
         var titulo = $($(tweet2).get(0)).text();
-        titulo = titulo.substring(0,titulo.indexOf("#")+3);
-        if(titulo.length>30){
-          titulo = "No Disponible";
+        titulo = titulo.substring(0,titulo.indexOf("#")+4);
+        if(titulo.length>40){
+          titulo = "Título No Disponible";
         }
         html += '<li><a href="'+link+'"'+'><span class="titleUp">'+titulo+'</span><img width="162" height="225" src="'+imagen+'"'+'/></a></li>';
       n++;
