@@ -46,7 +46,15 @@ jQuery(function($) {
       // If no item is provided, the whole content will be animated.
       $frame.sly('toStart', item);
     });
-
+    // To Start radio Button
+    
+    $wrap.find('.toStart2').on('checked', function() {
+      var item = $(this).data('item');
+      // Animate a particular item to the start of the frame.
+      // If no item is provided, the whole content will be animated.
+      $frame.sly('toStart', item);
+    });
+    
     // To Center button
     $wrap.find('.toCenter').on('click', function() {
       var item = $(this).data('item');
