@@ -12,7 +12,7 @@ jQuery(function($) {
     // Call Sly on frame
     $frame.sly({
       horizontal: 1,
-      itemNav: 'basic',
+      itemNav: 'centered',
       smart: 1,
       activateOn: 'click',
       mouseDragging: 1,
